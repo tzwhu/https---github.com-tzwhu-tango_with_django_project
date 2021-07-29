@@ -6,3 +6,8 @@ def index(request):
     # We make use of the shortcut function to make our lives easier.
     # Note that the first parameter is the template we wish to use.
     return render(request, 'rango/index.html', context=context_dict)
+
+
+def about(request):
+    # Spoiler: you don't need to pass a context dictionary here.
+    return render(request, 'rango/about.html')
