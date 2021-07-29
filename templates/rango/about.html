@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-{% load staticfiles %} <!-- New line -->
+{% load staticfiles %} 
 
 <html>
 
@@ -11,13 +11,14 @@
 	<body>
 		<h1>Rango says...</h1>
 		<div>
-			hey there partner! <br />
-			<strong>{{ boldmessage }}</strong><br />
+			here is the about page. <br />
+			This tutorial has been put together by Zhe Tang.<br />
 		</div>
 		<div>
 			<a href="/rango/about/">About</a><br />
 			<img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
-		</div>
+			<img src="{{ MEDIA_URL }}cat.jpg" alt="Picture of a Cat" />
+		</div>	
 	</body>
 
 </html>
