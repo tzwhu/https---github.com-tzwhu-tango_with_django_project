@@ -10,7 +10,6 @@ MEDIA_DIR = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [STATIC_DIR, ]
 STATIC_URL = '/static/'
 
-#'DIRS': [TEMPLATE_DIR, ]
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
@@ -23,7 +22,7 @@ ALLOWED_HOSTS = ['*']
 SECRET_KEY = 'django-insecure-mu%!kxp6ege@&dpjkt(em#+de)0(ddm1yglxvs8-^4ypn7si0$'
 DEBUG = True
 ALLOWED_HOSTS = []
-
+LOGIN_URL = 'rango:login'
 
 
 INSTALLED_APPS = [
