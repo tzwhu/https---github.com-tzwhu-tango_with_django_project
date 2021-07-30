@@ -3,12 +3,15 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+
 from rango.models import Category, Page
 from rango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
 
+from datetime import datetime
+
 def index(request):
-    category_list = Category.objects.order_by('-likes')[:5]
-    page_list = Page.objects.order_by('-views')[:5]
+    category_list = Category.objects.order_by('-likes')[:5] #get five most liked categories  
+    page_list = Page.objects.order_by('-views')[:5]         #get five most viewed pages
 
     context_dict = {}
     context_dict['boldmessage'] = 'Crunchy, creamy, cookie, candy, cupcake!'
